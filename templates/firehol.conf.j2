@@ -1,0 +1,23 @@
+# {{ ansible_managed }}
+
+version 5
+
+{% for i in firehol_interfaces %}
+interface {{ i.interface }}
+{% for rule in i.client_rules | default([]) %}    client {{ rule }}
+{% endfor %}
+{% for rule in i.server_rules | default([]) %}    server {{ rule }}
+{% endfor %}
+{% for rule in i.other_rules | default([]) %}    {{ rule }}
+{% endfor %}
+
+{% endfor %}
+
+{% for r in firehol_routers %}
+router {{ r.router }}
+{% for rule in r.route_rules | default([]) %}    route {{ rule }}
+{% endfor %}  
+{% for rule in r.other_rules | default([]) %}    {{ rule }}
+{% endfor %}
+
+{% endfor %}

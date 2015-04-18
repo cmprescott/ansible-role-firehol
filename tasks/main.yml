@@ -1,0 +1,18 @@
+---
+# tasks file for ansible-role-firehol
+
+# --- install ---
+- name: "apt | ensure firehol present"
+  apt: name=firehol state=present
+  when: ansible_pkg_mgr == 'apt'
+
+
+# --- config ---
+- name: "all | ensure templated firehol.conf"
+  template: 
+    src: "firehol.conf.j2" 
+    dest: "/etc/firehol/firehol.conf"
+    owner: root
+    group: root
+    mode: 0644
+
