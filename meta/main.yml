@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Prescott Chris
-  description: Installs iptables's manager firehol. Templates the conf file.
+  description: Installs FireHOL. Templates the conf file.
   company: 
   license: BSD
   min_ansible_version: 1.5.4
@@ -89,24 +89,7 @@ galaxy_info:
   #  - lenny
   #  - squeeze
     - wheezy
-  #
-  # Below are all categories currently available. Just as with
-  # the platforms above, uncomment those that apply to your role.
-  #
-  #categories:
-  #- cloud
-  #- cloud:ec2
-  #- cloud:gce
-  #- cloud:rax
-  #- clustering
-  #- database
-  #- database:nosql
-  #- database:sql
-  #- development
-  #- monitoring
+  categories:
   - networking
-  #- packaging
-  #- system
-  #- web
 
 dependencies: []

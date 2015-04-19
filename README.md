@@ -1,7 +1,7 @@
-Ansible Role: firehol
+Ansible Role: FireHOL
 =========
 
-Installs iptables's manager [firehol](http://firehol.org/). Templates the conf file.
+Installs [FireHOL](http://firehol.org/). Templates the conf file.
 
 Requirements
 ------------
