@@ -13,6 +13,12 @@ Role Variables
 
 ```yaml
 firehol_version: 5
+
+firehol_ports:
+  - service: some_service
+    server: "tcp/1234"
+    client: "default"
+
 firehol_interfaces:
   - interface: "any world"
     client_rules: [ "all accept" ]
