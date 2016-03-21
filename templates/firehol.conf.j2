@@ -1,6 +1,6 @@
 # {{ ansible_managed }}
 
-version 5
+version {{ firehol_version }}
 
 {% for i in firehol_interfaces %}
 interface {{ i.interface }}

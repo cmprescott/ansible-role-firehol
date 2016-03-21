@@ -6,12 +6,13 @@ Installs [FireHOL](http://firehol.org/). Templates the conf file.
 Requirements
 ------------
 
-Apt package manager
+Apt or Yum  package manager
 
 Role Variables
 --------------
 
 ```yaml
+firehol_version: 5
 firehol_interfaces:
   - interface: "any world"
     client_rules: [ "all accept" ]

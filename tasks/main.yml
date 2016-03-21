@@ -6,6 +6,10 @@
   apt: name=firehol state=present
   when: ansible_pkg_mgr == 'apt'
 
+- name: "yum | ensure firehol present"
+  yum: name=firehol state=present
+  when: ansible_pkg_mgr == 'yum'
+
 
 # --- config ---
 - name: "all | ensure templated firehol.conf"
@@ -15,4 +19,6 @@
     owner: root
     group: root
     mode: 0644
+  notify:
+    - restart firehol
 
