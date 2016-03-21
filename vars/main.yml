@@ -1,2 +1,4 @@
 ---
 # vars file for ansible-role-firehol
+
+firehol_version: 5

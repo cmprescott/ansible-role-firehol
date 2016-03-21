@@ -1,6 +1,12 @@
 # {{ ansible_managed }}
 
-version 5
+version {{ firehol_version }}
+
+{% for p in firehol_ports %}
+server_{{p.service}}_ports="{{p.server}}"
+client_{{p.service}}_ports="{{p.client}}"
+
+{% endfor %}
 
 {% for i in firehol_interfaces %}
 interface {{ i.interface }}
